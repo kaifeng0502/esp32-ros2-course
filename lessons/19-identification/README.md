@@ -36,6 +36,8 @@ python3 host/motor_mpc.py fit results/id01/identification.csv
 
 模型是 y[k+1]=a1*y[k]+a2*y[k-1]+b1*u[k]+b2*u[k-1]+c；u用百分数50而不是0.5。采样中的held_pwm是造成当前转速的上一间隔输入，不能错用next_pwm。RMSE是均方根误差，不是最坏误差界。
 
+原理补充：[对照项目理解](../../docs/control-principles.md)。
+
 ## 练习与验收
 
 把动态模型在稳态下化简，得到本参考实验 RPM≈2.256×PWM百分比−3.633。解释为什么它只能给最终稳态，而MPC需要动态模型来预测过渡过程。公开转录参数仅作阅读，实机必须自己采集并验证。

@@ -40,6 +40,8 @@ bash lessons/14-actions/code/client.sh --turns 10 --rpm 60 --timeout 20 --cancel
 
 先source安装后的工作区，否则可能运行旧版接口或找不到包。只保留一个串口服务器。退出客户端本身不自动取消，使用 --cancel-all。最终圈数是编码器估计，非独立位置真值。
 
+原理补充：[对照项目理解](../../docs/ros-concepts.md)。
+
 ## 练习与验收
 
 对照handle_goal、cancel和execute相关回调，找到 ActionEngine 的状态转换、STOP确认及result生成；解释drive_disabled=True与CANCELED的先后关系。

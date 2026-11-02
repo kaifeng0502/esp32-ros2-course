@@ -36,6 +36,8 @@ bash lessons/14-actions/code/client.sh --configured
 
 Node not found先确认服务器确实在运行，环境与通信域相同。旧客户端没有 --configured 时需要重新构建并source正确安装目录。参数文件在src修改后要重新构建，不能只改一个没被加载的副本。
 
+原理补充：[对照项目理解](../../docs/ros-concepts.md)。
+
 ## 练习与验收
 
 用 ros2 param list/get/describe/dump 查看参数。跟踪Kp从YAML到Python校验、串口字段再到C结构的路径。

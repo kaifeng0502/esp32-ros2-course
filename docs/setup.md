@@ -90,6 +90,8 @@ source "$HOME/esp32_ros2_ws/install/setup.bash"
 
 ## 5. 测试不等于实机验收
 
+若`ros2 run`报告`No executable found`，除确认已source正确工作区外，还需检查源码可执行权限。`colcon --symlink-install`链接到原始脚本，源文件也必须可执行。本仓库已跟踪此权限，并在CI实际运行安装后的客户端验证。
+
 ```bash
 python -m pip install -r tests/requirements-numerical.txt
 python -m unittest discover -s tests -v

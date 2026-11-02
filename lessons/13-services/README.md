@@ -39,6 +39,8 @@ Trigger请求没有业务字段，响应包含success和message。桥接在等�
 
 不能把所有事情都换成Service：高频传感器数据适合Topic，长任务需要进度和取消时用Action。success描述服务定义的完成条件；轮子可能仍有惯性。
 
+原理补充：[对照项目理解](../../docs/ros-concepts.md)。
+
 ## 练习与验收
 
 读 on_stop 回调，找到请求、板上确认与响应的顺序。分别说明Topic、Service、Action在电机系统中的合适场景。

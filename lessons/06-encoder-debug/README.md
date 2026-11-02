@@ -35,6 +35,8 @@ python3 lessons/06-encoder-debug/code/run.py --port "$COURSE_PORT" --seconds 30
 
 本次真实故障是编码器地线没有可靠连到ESP32地：蓝线对ESP32 GND曾测到约2.6V，最终修好后断电通断测试持续响，两路才正常。线色仅针对本样机，其他电机以丝印/资料为准。只给VCC和GND不能测速，只接信号没有共同参考也不行。
 
+原理补充：[对照项目理解](../../docs/control-principles.md)。
+
 ## 练习与验收
 
 断电后分别检查端到端连续性；上电只测蓝线对ESP32 GND应接近0V，VCC对蓝线应接近3.3V。每次只改一处并记录结果，避免同时调换两根线丢失因果关系。

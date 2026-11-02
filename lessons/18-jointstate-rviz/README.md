@@ -39,6 +39,8 @@ ros2 run tf2_ros tf2_echo base_link wheel_link
 
 ENC2?区别于ENC?和任务内LAB位置：它有带方向累计计数、设备时间与boot_id，空闲和重启也能处理。TF的[0,0,0.055]是模型安装位置，当前旋转是另一部分。旧RViz多visual材质问题用固定子link解决；TF太大调整Marker Scale。
 
+原理补充：[对照项目理解](../../docs/ros-concepts.md)。
+
 ## 练习与验收
 
 在RViz添加TF，拖动鼠标改变观察视角，区分视角变化与关节变化。转一整圈时外观回原位，但累计JointState角度仍增加约2π。

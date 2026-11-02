@@ -14,6 +14,8 @@
 - [常见故障与排查顺序](docs/troubleshooting.md)
 - [实机结果、数据来源与局限](docs/results.md)
 - [代码结构、协议与阅读路线](docs/architecture.md)
+- [对照实物理解PWM、PI/PID、位置与MPC](docs/control-principles.md)
+- [对照项目理解ROS 2接口与数据流](docs/ros-concepts.md)
 
 本课程的实机基线是 **ESP32-S3 N16R8 / ESP-IDF 5.5.6 / SH1106 128×64 / TB6612FNG / N20 双路编码器 / Ubuntu 24.04 + ROS 2 Jazzy**。编码器每路约1400边沿/车轮圈是这套硬件的校准结果，不是所有N20的通用参数。
 

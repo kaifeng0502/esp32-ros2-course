@@ -38,6 +38,8 @@ bash lessons/16-launch/code/run.sh plot:=false
 
 串口不存在时桥接启动失败，绘图随后被关闭的KeyboardInterrupt通常是退出链的一部分。窗口有了却没线，先核对话题与发布频率；不把旧曲线当新鲜反馈。
 
+原理补充：[对照项目理解](../../docs/ros-concepts.md)。
+
 ## 练习与验收
 
 阅读Launch中的Node、parameters、LaunchArgument与OnProcessExit。用自定义config文件改变目标，不通过修改绘图器来改变硬件行为。

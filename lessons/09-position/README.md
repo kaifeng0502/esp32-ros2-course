@@ -35,6 +35,8 @@ python3 lessons/09-position/code/run.py --port "$COURSE_PORT" --degrees 90 --rpm
 
 DIRECTION_ERROR先核对计数方向。编码器在电机侧，齿隙、惯性和轮胎打滑不能靠它全部观察；编码器估算误差不是独立测得的轮胎位置误差。驱动关闭、轮子停稳和到位精度是不同概念。
 
+原理补充：[对照项目理解](../../docs/control-principles.md)。
+
 ## 练习与验收
 
 在轮胎贴标记，用肉眼或外部参考比较正反90°的实际停点。记录惯性、减速距离、齿隙对重复性的影响，不把计数分辨率直接当定位精度。

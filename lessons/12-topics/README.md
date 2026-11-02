@@ -42,6 +42,8 @@ ros2 topic pub --once /motor/target_rpm std_msgs/msg/Float64 '{data: 60.0}'
 
 每个ROS终端保持相同ROS_DOMAIN_ID。图空时先echo确认发布者与数据，再检查字段和时间窗口。本节早期桥接由ENC?估算无方向RPM大小；后面的LAB反馈、JointState带符号角度有不同语义。
 
+原理补充：[对照项目理解](../../docs/ros-concepts.md)。
+
 ## 练习与验收
 
 解释CLI里的 std_msgs/msg/Float64 与 {data:60.0} 如何对应消息定义。画目标和实测两条线，分清状态流与一次控制命令。

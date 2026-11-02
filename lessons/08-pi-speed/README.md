@@ -36,6 +36,8 @@ python3 lessons/08-pi-speed/code/run.py --port "$COURSE_PORT" --status
 
 正转显示负号时调整 encoder-sign，而不是盲目反接供电；两方向使用同一校正。PWM与RPM是输入/输出关系，积分项通过误差累计补偿负载或前馈不准。断USB时主机停车命令可能送不到，板上的运行时限仍独立执行。
 
+原理补充：[对照项目理解](../../docs/control-principles.md)。
+
 ## 练习与验收
 
 找出 e、P、I 和前馈对应的代码与单位。比较启动过程和稳态；说明积分为什么能消除偏差，也可能在限幅时积累过多。

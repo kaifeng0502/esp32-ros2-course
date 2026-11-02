@@ -41,6 +41,8 @@ listener持续收到Hello World。UTM顶部USB菜单选择Espressif设备后，l
 
 安装了ROS不等于当前终端已source；每个终端都需要环境。usermod不会自动更新旧shell的组。No such file先检查USB转发；Permission denied检查组；Resource busy再查占用。串口占用与权限不足不能当成同一种错误。
 
+原理补充：[对照项目理解](../../docs/ros-concepts.md)。
+
 ## 练习与验收
 
 用 ros2 node list、ros2 topic list 与 ros2 topic echo /chatter --once观察原生示例。理解 ros2 是ROS自带CLI，可扩展命令与自己的节点代码是不同层次。

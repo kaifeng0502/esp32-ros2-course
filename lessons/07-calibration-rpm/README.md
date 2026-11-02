@@ -35,6 +35,8 @@ python3 host/encoder_monitor.py --port "$COURSE_PORT" --counts-per-rev 1400 --se
 
 累计6879等单个数字不能直接证明转了几圈，必须有起点和准确转数。两路若差异很大先修反馈，不要平均掩盖故障。当前ENC?是无方向边沿数，逆转也增加。主机约1秒窗口会带来显示滞后。
 
+原理补充：[对照项目理解](../../docs/control-principles.md)。
+
 ## 练习与验收
 
 重复三次校准并比较离散程度。换不同减速比电机后，需一致更新 main/encoder.h、相关主机估算和ROS校准参数，重新辨识模型；脚本不会自动把新数值写进固件。

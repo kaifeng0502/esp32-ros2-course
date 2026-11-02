@@ -39,6 +39,8 @@ python3 host/motor_mpc.py compare --port "$COURSE_PORT" --model results/id01/mod
 
 当前代价是转速误差平方加lambda×PWM变化平方。增大lambda表达动作更平缓，不是禁止超调。真实实验起步超调约3.65%降至1.70%，但IAE增加约40%；进入误差带的调节时间不等于整个加速过程更快。
 
+原理补充：[对照项目理解](../../docs/control-principles.md)。
+
 ## 练习与验收
 
 读实际控制模型而非仅稳态直线，找出预测矩阵、求解迭代、输入限幅、扰动估计和10ms预算。比较调节时间、IAE、超调与末段误差，不据两轮数据宣称MPC普遍优于PID。
