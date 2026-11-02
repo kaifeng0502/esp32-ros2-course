@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "slug": "01-setup-usb",
+  "title": "开发环境、USB 与 Hello World",
+  "goal": "从完全没有串口输出开始，完成 ESP-IDF 编译、烧录、复位和监控，理解 IDE 与命令行使用的是同一套工具链。",
+  "power": "只接 ESP32 的 USB；本节不接电机电源。",
+  "sources": [
+    "lessons/01-setup-usb/code/firmware/main/hello_world_main.c",
+    "idf.sh",
+    "docs/setup.md"
+  ]
+}

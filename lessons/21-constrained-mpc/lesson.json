@@ -1,0 +1,14 @@
+{
+  "id": 21,
+  "slug": "21-constrained-mpc",
+  "title": "约束MPC：限制预测转速、误差余量与代价",
+  "goal": "把“尽量不超调”的偏好改成明确的预测不越界约束，并用实测区分模型保证与真实结果。",
+  "power": "车轮悬空、10V稳定；本版仅做升速。使用同一模型/权重比较普通MPC与MPC_CAP。",
+  "sources": [
+    "main/predictive.c",
+    "main/predictive.h",
+    "host/motor_mpc.py",
+    "tests/test_predictive_constraints.py",
+    "docs/results.md"
+  ]
+}

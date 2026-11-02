@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!-- Schematic dimensions in metres, not a measured CAD model or a physics simulation. -->
+<robot name="encoder_wheel">
+  <material name="rubber"><color rgba="0.12 0.13 0.15 1"/></material>
+  <material name="motor"><color rgba="0.55 0.60 0.65 1"/></material>
+  <material name="marker"><color rgba="1.0 0.55 0.05 1"/></material>
+  <material name="hub"><color rgba="0.15 0.55 0.95 1"/></material>
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 -0.045 0.055"/>
+      <geometry><box size="0.045 0.07 0.03"/></geometry>
+      <material name="motor"/>
+    </visual>
+  </link>
+  <link name="wheel_link">
+    <visual>
+      <origin rpy="1.57079632679 0 0"/>
+      <geometry><cylinder radius="0.05" length="0.02"/></geometry>
+      <material name="rubber"/>
+    </visual>
+  </link>
+  <!-- One visual per link avoids older RViz versions reusing the tire's
+       material for every visual in wheel_link. Fixed children still rotate
+       with wheel_joint, without adding any measured or commanded joints. -->
+  <link name="wheel_hub">
+    <visual>
+      <origin rpy="1.57079632679 0 0"/>
+      <geometry><cylinder radius="0.011" length="0.025"/></geometry>
+      <material name="hub"/>
+    </visual>
+  </link>
+  <joint name="wheel_hub_fixed" type="fixed">
+    <parent link="wheel_link"/><child link="wheel_hub"/>
+  </joint>
+  <link name="wheel_marker_front">
+    <visual>
+      <origin xyz="0.029 0.014 0"/>
+      <geometry><box size="0.038 0.006 0.012"/></geometry>
+      <material name="marker"/>
+    </visual>
+  </link>
+  <joint name="wheel_marker_front_fixed" type="fixed">
+    <parent link="wheel_link"/><child link="wheel_marker_front"/>
+  </joint>
+  <link name="wheel_marker_back">
+    <visual>
+      <origin xyz="0.029 -0.014 0"/>
+      <geometry><box size="0.038 0.006 0.012"/></geometry>
+      <material name="marker"/>
+    </visual>
+  </link>
+  <joint name="wheel_marker_back_fixed" type="fixed">
+    <parent link="wheel_link"/><child link="wheel_marker_back"/>
+  </joint>
+  <joint name="wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_link"/>
+    <origin xyz="0 0 0.055"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+</robot>

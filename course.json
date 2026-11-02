@@ -1,0 +1,114 @@
+{
+  "title": "ESP32 → ROS 2：从点亮OLED到约束MPC",
+  "language": "zh-CN",
+  "hardware": "ESP32-S3 N16R8 / SH1106 / TB6612FNG / N20 encoder motor",
+  "esp_idf": "5.5.6",
+  "ros": "Jazzy on Ubuntu 24.04",
+  "lessons": [
+    {
+      "id": 1,
+      "slug": "01-setup-usb",
+      "title": "开发环境、USB 与 Hello World"
+    },
+    {
+      "id": 2,
+      "slug": "02-oled-sh1106",
+      "title": "OLED：I²C 接线、SH1106 与文字位图"
+    },
+    {
+      "id": 3,
+      "slug": "03-usb-display",
+      "title": "USB 实时显示：时间、剩余百分比与像素动画"
+    },
+    {
+      "id": 4,
+      "slug": "04-wifi-display",
+      "title": "Wi-Fi 显示与独立供电"
+    },
+    {
+      "id": 5,
+      "slug": "05-motor-pwm",
+      "title": "电机驱动、万用表与开环PWM"
+    },
+    {
+      "id": 6,
+      "slug": "06-encoder-debug",
+      "title": "编码器接线与共地排错"
+    },
+    {
+      "id": 7,
+      "slug": "07-calibration-rpm",
+      "title": "每圈计数校准与实时RPM"
+    },
+    {
+      "id": 8,
+      "slug": "08-pi-speed",
+      "title": "PI恒速、目标参数、正反转与OLED反馈"
+    },
+    {
+      "id": 9,
+      "slug": "09-position",
+      "title": "指定圈数与角度停止"
+    },
+    {
+      "id": 10,
+      "slug": "10-control-comparison",
+      "title": "开环、P/PI/PID与响应速度—稳定性取舍"
+    },
+    {
+      "id": 11,
+      "slug": "11-ros-ubuntu",
+      "title": "Ubuntu/UTM、ROS 2 Jazzy与USB权限"
+    },
+    {
+      "id": 12,
+      "slug": "12-topics",
+      "title": "Topic：编码器发布、目标订阅与实时曲线"
+    },
+    {
+      "id": 13,
+      "slug": "13-services",
+      "title": "Service：请求停止并等待确认"
+    },
+    {
+      "id": 14,
+      "slug": "14-actions",
+      "title": "Action：圈数目标、进度、结果与取消"
+    },
+    {
+      "id": 15,
+      "slug": "15-parameters",
+      "title": "Parameter：目标、时长和控制参数如何传到硬件"
+    },
+    {
+      "id": 16,
+      "slug": "16-launch",
+      "title": "Launch：一条命令启动桥接与绘图"
+    },
+    {
+      "id": 17,
+      "slug": "17-rosbag",
+      "title": "rosbag：录制、离线回放与分析"
+    },
+    {
+      "id": 18,
+      "slug": "18-jointstate-rviz",
+      "title": "JointState、URDF、TF与RViz虚拟轮子"
+    },
+    {
+      "id": 19,
+      "slug": "19-identification",
+      "title": "真实电机的预测模型辨识与留出验证"
+    },
+    {
+      "id": 20,
+      "slug": "20-mpc-comparison",
+      "title": "板上MPC与PID：公平比较与权重实验"
+    },
+    {
+      "id": 21,
+      "slug": "21-constrained-mpc",
+      "title": "约束MPC：限制预测转速、误差余量与代价"
+    }
+  ]
+}

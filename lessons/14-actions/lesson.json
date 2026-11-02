@@ -1,0 +1,13 @@
+{
+  "id": 14,
+  "slug": "14-actions",
+  "title": "Action：圈数目标、进度、结果与取消",
+  "goal": "把转3圈这样的长任务做成Action，区分goal、feedback、result与cancel。",
+  "power": "构建/启动服务器不转电机；发goal前车轮悬空、10V接通。",
+  "sources": [
+    "ros2/motor_action_interfaces/action/MoveWheel.action",
+    "ros2/motor_action_interfaces/scripts/motor_action_server.py",
+    "ros2/motor_action_interfaces/scripts/motor_action_core.py",
+    "ros2/motor_action_interfaces/scripts/motor_action_client.py"
+  ]
+}

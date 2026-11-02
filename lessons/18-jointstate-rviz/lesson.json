@@ -1,0 +1,13 @@
+{
+  "id": 18,
+  "slug": "18-jointstate-rviz",
+  "title": "JointState、URDF、TF与RViz虚拟轮子",
+  "goal": "用带方向累计编码器计数发布关节角度，通过模型生成坐标变换，让虚拟轮子跟随实物。",
+  "power": "先保持10V断开，手转验证；启动可视化不自动转电机。",
+  "sources": [
+    "ros2/motor_action_interfaces/scripts/wheel_joint_state.py",
+    "ros2/motor_action_interfaces/scripts/wheel_joint_core.py",
+    "ros2/motor_action_interfaces/urdf/single_wheel.urdf",
+    "ros2/motor_action_interfaces/launch/wheel_rviz.launch.py"
+  ]
+}

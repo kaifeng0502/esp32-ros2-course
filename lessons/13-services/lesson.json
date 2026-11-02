@@ -1,0 +1,11 @@
+{
+  "id": 13,
+  "slug": "13-services",
+  "title": "Service：请求停止并等待确认",
+  "goal": "将一次请求/响应与连续Topic区分开，理解收到响应不等于机械瞬间静止。",
+  "power": "停止服务本身不启动运动；如先启动演示任务，仍需车轮悬空并遵循10V步骤。",
+  "sources": [
+    "ros2/encoder_publisher.py",
+    "lessons/13-services/code/run.py"
+  ]
+}

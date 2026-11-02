@@ -1,0 +1,18 @@
+{
+  "schema": "observed-model-summary",
+  "origin": "transcribed_console",
+  "deployable": false,
+  "coefficient_decimal_places": 6,
+  "coefficients": {
+    "a1": 0.886839,
+    "a2": -0.148937,
+    "b1": 0.397151,
+    "b2": 0.194144,
+    "c": -0.952157
+  },
+  "nominal_sample_seconds": 0.05,
+  "free_prediction_rmse_rpm": 0.4,
+  "one_step_rmse_rpm": 0.32,
+  "r2_display_rounded": "1.000",
+  "note": "Rounded reference only; run identify to generate and validate your own model.json."
+}

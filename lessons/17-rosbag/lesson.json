@@ -1,0 +1,12 @@
+{
+  "id": 17,
+  "slug": "17-rosbag",
+  "title": "rosbag：录制、离线回放与分析",
+  "goal": "保存目标、实测、PWM和有效性，离线重现一次实验，理解消息时间戳与采样口径。",
+  "power": "录包不启动运动。回放时关闭硬件桥接并使用独立ROS_DOMAIN_ID，不连接电机电源。",
+  "sources": [
+    "ros2/analyze_motor_bag.py",
+    "lessons/17-rosbag/code/record.sh",
+    "lessons/17-rosbag/code/replay.sh"
+  ]
+}

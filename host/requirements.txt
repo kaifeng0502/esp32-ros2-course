@@ -1,0 +1,5 @@
+Pillow>=11,<13
+pyserial==3.5
+
+matplotlib>=3.9,<4
+numpy>=1.26,<3

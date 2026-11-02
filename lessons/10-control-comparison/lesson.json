@@ -1,0 +1,12 @@
+{
+  "id": 10,
+  "slug": "10-control-comparison",
+  "title": "开环、P/PI/PID与响应速度—稳定性取舍",
+  "goal": "在相同目标和输入限幅下比较四种控制，区分稳态精度、超调、响应和抗扰。",
+  "power": "车轮悬空、10V稳定，先不加人为负载。扰动比较应使用可重复的负载装置，不用手卡住转动的轮胎。",
+  "sources": [
+    "host/motor_lab.py",
+    "main/motor.c",
+    "data/observed/README.md"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 2,
+  "slug": "02-oled-sh1106",
+  "title": "OLED：I²C 接线、SH1106 与文字位图",
+  "goal": "点亮 1.3 英寸 SH1106 128×64 屏，理解供电、I²C 地址、显示控制器和字体栅格化。",
+  "power": "先断开 USB 再接线；本节只用 USB 供电，不接电机10V。",
+  "sources": [
+    "lessons/02-oled-sh1106/code/firmware/main/oled_test.c",
+    "lessons/02-oled-sh1106/code/make_bitmap.py",
+    "docs/hardware.md"
+  ]
+}

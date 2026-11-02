@@ -1,0 +1,49 @@
+name: Course checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  offline-tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: host/requirements.txt
+      - run: python -m pip install -r host/requirements.txt -r tests/requirements-numerical.txt
+      - run: python -m unittest discover -s tests -v
+      - run: python tools/check_course.py
+      - run: python tools/plot_observed_results.py
+  esp32-builds:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: espressif/esp-idf-ci-action@v1
+        with:
+          esp_idf_version: v5.5.6
+          target: esp32s3
+          command: >-
+            cp config/sdkconfig.verified sdkconfig && idf.py build &&
+            idf.py -C lessons/01-setup-usb/code/firmware build &&
+            idf.py -C lessons/02-oled-sh1106/code/firmware build
+  ros-jazzy-build:
+    runs-on: ubuntu-24.04
+    container: ros:jazzy-ros-base
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install course dependencies
+        run: |
+          apt-get update
+          apt-get install -y python3-colcon-common-extensions python3-serial python3-matplotlib python3-pyqt5 ros-jazzy-sensor-msgs ros-jazzy-std-srvs ros-jazzy-robot-state-publisher ros-jazzy-rviz2 ros-jazzy-rqt-plot
+      - name: Build real ROS interfaces and inspect launch descriptions
+        shell: bash
+        run: |
+          bash scripts/ros_build.sh /tmp/course_ros_ws
+          source /opt/ros/jazzy/setup.bash
+          source /tmp/course_ros_ws/install/setup.bash
+          python3 -c 'from motor_action_interfaces.action import MoveWheel; from motor_action_interfaces.msg import EncoderState'
+          ros2 run motor_action_interfaces motor_action_client.py --help
+          ros2 launch motor_action_interfaces motor_lab.launch.py --show-args
+          ros2 launch motor_action_interfaces wheel_rviz.launch.py --show-args

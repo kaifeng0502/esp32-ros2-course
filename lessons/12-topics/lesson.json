@@ -1,0 +1,12 @@
+{
+  "id": 12,
+  "slug": "12-topics",
+  "title": "Topic：编码器发布、目标订阅与实时曲线",
+  "goal": "先只读发布RPM，再显式启用目标订阅；理解发布者、订阅者、消息类型和字段。",
+  "power": "只读阶段10V断开，手转验证。启用控制后，车轮悬空再接10V。",
+  "sources": [
+    "ros2/encoder_publisher.py",
+    "lessons/12-topics/code/run.py",
+    "ros2/motor_action_interfaces/scripts/motor_plot.py"
+  ]
+}

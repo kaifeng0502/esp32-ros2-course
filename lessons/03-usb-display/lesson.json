@@ -1,0 +1,12 @@
+{
+  "id": 3,
+  "slug": "03-usb-display",
+  "title": "USB 实时显示：时间、剩余百分比与像素动画",
+  "goal": "让电脑生成画面，ESP32只接收并显示；分清数据获取、排版、传输与硬件刷新。",
+  "power": "USB供电，电机10V断开。完成本节前先切换到仓库根目录的共用固件。",
+  "sources": [
+    "host/oled_demo.py",
+    "host/display.py",
+    "main/codex_oled.c"
+  ]
+}

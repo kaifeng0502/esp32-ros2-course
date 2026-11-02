@@ -1,0 +1,14 @@
+{
+  "id": 20,
+  "slug": "20-mpc-comparison",
+  "title": "板上MPC与PID：公平比较与权重实验",
+  "goal": "将10步预测的小规模优化放到ESP32，在相同反馈、目标和PWM限幅下比较PID与MPC。",
+  "power": "模型通过验证后，车轮悬空、10V与负载保持不变；每次10秒，默认交换顺序重复两轮。",
+  "sources": [
+    "main/predictive.c",
+    "host/motor_mpc.py",
+    "host/predictive_model.py",
+    "data/observed/metrics.csv",
+    "docs/results.md"
+  ]
+}

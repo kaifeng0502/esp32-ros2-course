@@ -1,0 +1,13 @@
+{
+  "id": 4,
+  "slug": "04-wifi-display",
+  "title": "Wi-Fi 显示与独立供电",
+  "goal": "将画面传输从USB换成局域网UDP，同时理解无线通信与供电是两回事。",
+  "power": "配置时USB接电脑。成功后可把USB接合规5V充电器或充电宝；电机10V绝不能直接接ESP32的3V3或USB供电引脚。",
+  "sources": [
+    "host/setup_wifi.py",
+    "host/wifi_transport.py",
+    "main/network.c",
+    "host/oled_demo.py"
+  ]
+}

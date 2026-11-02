@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>motor_action_interfaces</name>
+  <version>1.0.0</version>
+  <description>Wheel position Action lesson for the ESP32 motor lab.</description>
+  <maintainer email="57780373+kaifeng0502@users.noreply.github.com">kaifeng0502</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <build_depend>rosidl_default_generators</build_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <depend>action_msgs</depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>rcl_interfaces</exec_depend>
+  <depend>std_msgs</depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>python3-serial</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ros2launch</exec_depend>
+  <exec_depend>python3-matplotlib</exec_depend>
+  <exec_depend>python3-pyqt5</exec_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

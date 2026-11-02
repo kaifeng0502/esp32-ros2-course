@@ -1,0 +1,12 @@
+{
+  "id": 9,
+  "slug": "09-position",
+  "title": "指定圈数与角度停止",
+  "goal": "在速度环外加入累计位置、减速规划与终点制动，理解相对位置和真实机械位置的区别。",
+  "power": "车轮悬空、10V稳定；先慢速、小角度测试。",
+  "sources": [
+    "host/motor_lab.py",
+    "main/motor.c",
+    "main/encoder.c"
+  ]
+}

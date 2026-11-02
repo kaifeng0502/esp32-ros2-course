@@ -1,0 +1,2 @@
+# Optional independent constrained-QP oracle used by test_predictive_constraints.py.
+scipy>=1.14,<2

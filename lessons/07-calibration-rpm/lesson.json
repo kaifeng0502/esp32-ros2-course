@@ -1,0 +1,12 @@
+{
+  "id": 7,
+  "slug": "07-calibration-rpm",
+  "title": "每圈计数校准与实时RPM",
+  "goal": "用准确圈数确定计数口径，再把时间窗口内的计数增量换算为转速。",
+  "power": "校准时电机10V断开，手动同方向转动；不要在校准中途重启板子或来回晃轮子。",
+  "sources": [
+    "host/calibrate_encoder.py",
+    "host/encoder_monitor.py",
+    "main/encoder.h"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": 5,
+  "slug": "05-motor-pwm",
+  "title": "电机驱动、万用表与开环PWM",
+  "goal": "接好TB6612FNG与一个N20电机，完成第一次有限时长的开环转动；理解GPIO不能直接给电机供电。",
+  "power": "接线时USB与电机电源都断开。按硬件表共地，测量适配器输出并调到本实验的10V，再让车轮悬空测试。",
+  "sources": [
+    "main/motor.c",
+    "host/motor_control.py",
+    "docs/hardware.md",
+    "docs/troubleshooting.md"
+  ]
+}

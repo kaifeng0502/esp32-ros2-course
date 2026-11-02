@@ -1,0 +1,224 @@
+$ cd $RUN_ROOT
+
+python3 motor_mpc.py compare --port /dev/ttyACM0 \
+  --model $RUN_ROOT/data/id02/model.json \
+  --controllers mpc,mpc_cap --margin-rpm 1 \
+  --rpm 80 --step-rpm 110 \
+  --out $RUN_ROOT/data/compare_cap1
+MPC: 10s，PWM 上限 55%；车轮悬空，电机电源为已调好的 10V。
+3…
+2…
+1…
+ 0.00s MPC 目标= 80.0 实测=   0.0 RPM PWM= 39.5% 求解=604us RUNNING
+ 0.21s MPC 目标= 80.0 实测=  75.5 RPM PWM= 40.5% 求解=301us RUNNING
+ 0.43s MPC 目标= 80.0 实测=  80.6 RPM PWM= 36.9% 求解=187us RUNNING
+ 0.65s MPC 目标= 80.0 实测=  79.6 RPM PWM= 37.5% 求解=174us RUNNING
+ 0.85s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.4% 求解=173us RUNNING
+ 1.07s MPC 目标= 80.0 实测=  80.0 RPM PWM= 37.4% 求解=190us RUNNING
+ 1.29s MPC 目标= 80.0 实测=  80.0 RPM PWM= 37.4% 求解=125us RUNNING
+ 1.50s MPC 目标= 80.0 实测=  80.0 RPM PWM= 37.4% 求解=127us RUNNING
+ 1.71s MPC 目标= 80.0 实测=  79.8 RPM PWM= 37.5% 求解=196us RUNNING
+ 1.92s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.4% 求解=124us RUNNING
+ 2.13s MPC 目标= 80.0 实测=  80.0 RPM PWM= 37.4% 求解=131us RUNNING
+ 2.35s MPC 目标= 80.0 实测=  79.8 RPM PWM= 37.4% 求解=131us RUNNING
+ 2.56s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.4% 求解=118us RUNNING
+ 2.76s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.5% 求解=117us RUNNING
+ 2.97s MPC 目标= 80.0 实测=  79.8 RPM PWM= 37.4% 求解=125us RUNNING
+ 3.17s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.4% 求解=121us RUNNING
+ 3.38s MPC 目标= 80.0 实测=  79.8 RPM PWM= 37.4% 求解=117us RUNNING
+ 3.59s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.4% 求解=122us RUNNING
+ 3.79s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.4% 求解=117us RUNNING
+ 4.01s MPC 目标=110.0 实测=  79.9 RPM PWM= 51.6% 求解=478us RUNNING
+ 4.22s MPC 目标=110.0 实测= 107.2 RPM PWM= 52.5% 求解=247us RUNNING
+ 4.44s MPC 目标=110.0 实测= 110.5 RPM PWM= 50.6% 求解=183us RUNNING
+ 4.67s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.9% 求解=207us RUNNING
+ 4.88s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.9% 求解=200us RUNNING
+ 5.09s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.8% 求解=198us RUNNING
+ 5.30s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.9% 求解=197us RUNNING
+ 5.51s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.8% 求解=195us RUNNING
+ 5.72s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.8% 求解=193us RUNNING
+ 5.95s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.8% 求解=170us RUNNING
+ 6.18s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.8% 求解=168us RUNNING
+ 6.40s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.7% 求解=177us RUNNING
+ 6.62s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.7% 求解=203us RUNNING
+ 6.84s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.7% 求解=198us RUNNING
+ 7.06s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.8% 求解=191us RUNNING
+ 7.28s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.8% 求解=173us RUNNING
+ 7.50s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.8% 求解=145us RUNNING
+ 7.73s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.8% 求解=131us RUNNING
+ 7.96s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.8% 求解=193us RUNNING
+ 8.18s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.8% 求解=209us RUNNING
+ 8.40s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.8% 求解=191us RUNNING
+ 8.61s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.8% 求解=186us RUNNING
+ 8.81s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.8% 求解=188us RUNNING
+ 9.02s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.8% 求解=187us RUNNING
+ 9.23s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.8% 求解=178us RUNNING
+ 9.44s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.8% 求解=194us RUNNING
+ 9.65s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.8% 求解=179us RUNNING
+ 9.86s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.8% 求解=190us RUNNING
+MPC_CAP: 10s，PWM 上限 55%；车轮悬空，电机电源为已调好的 10V。
+3…
+2…
+1…
+ 0.00s MPC_CAP 目标= 80.0 实测=   0.0 RPM PWM= 39.4% 求解=734us RUNNING 预测峰值=79.00 上限=79.00
+ 0.20s MPC_CAP 目标= 80.0 实测=  72.6 RPM PWM= 37.8% 求解=1515us RUNNING 预测峰值=79.00 上限=79.00
+ 0.41s MPC_CAP 目标= 80.0 实测=  77.8 RPM PWM= 37.1% 求解=2233us RUNNING 预测峰值=79.00 上限=79.00
+ 0.63s MPC_CAP 目标= 80.0 实测=  78.9 RPM PWM= 36.8% 求解=2186us RUNNING 预测峰值=79.00 上限=79.00
+ 0.85s MPC_CAP 目标= 80.0 实测=  78.9 RPM PWM= 36.8% 求解=2188us RUNNING 预测峰值=79.00 上限=79.00
+ 1.07s MPC_CAP 目标= 80.0 实测=  79.0 RPM PWM= 36.6% 求解=2238us RUNNING 预测峰值=79.00 上限=79.00
+ 1.29s MPC_CAP 目标= 80.0 实测=  78.8 RPM PWM= 36.9% 求解=1887us RUNNING 预测峰值=79.00 上限=79.00
+ 1.49s MPC_CAP 目标= 80.0 实测=  78.9 RPM PWM= 36.8% 求解=2243us RUNNING 预测峰值=79.00 上限=79.00
+ 1.72s MPC_CAP 目标= 80.0 实测=  78.9 RPM PWM= 36.8% 求解=2230us RUNNING 预测峰值=79.00 上限=79.00
+ 1.94s MPC_CAP 目标= 80.0 实测=  78.9 RPM PWM= 36.9% 求解=1884us RUNNING 预测峰值=79.00 上限=79.00
+ 2.16s MPC_CAP 目标= 80.0 实测=  79.0 RPM PWM= 36.8% 求解=2097us RUNNING 预测峰值=79.00 上限=79.00
+ 2.37s MPC_CAP 目标= 80.0 实测=  79.0 RPM PWM= 36.6% 求解=2081us RUNNING 预测峰值=79.00 上限=79.00
+ 2.58s MPC_CAP 目标= 80.0 实测=  78.9 RPM PWM= 36.8% 求解=2123us RUNNING 预测峰值=79.00 上限=79.00
+ 2.79s MPC_CAP 目标= 80.0 实测=  79.0 RPM PWM= 36.7% 求解=2083us RUNNING 预测峰值=79.00 上限=79.00
+ 3.01s MPC_CAP 目标= 80.0 实测=  78.9 RPM PWM= 36.9% 求解=2219us RUNNING 预测峰值=79.00 上限=79.00
+ 3.23s MPC_CAP 目标= 80.0 实测=  78.9 RPM PWM= 36.8% 求解=2227us RUNNING 预测峰值=79.00 上限=79.00
+ 3.45s MPC_CAP 目标= 80.0 实测=  78.9 RPM PWM= 36.8% 求解=2228us RUNNING 预测峰值=79.00 上限=79.00
+ 3.67s MPC_CAP 目标= 80.0 实测=  79.0 RPM PWM= 36.8% 求解=2224us RUNNING 预测峰值=79.00 上限=79.00
+ 3.89s MPC_CAP 目标= 80.0 实测=  79.0 RPM PWM= 36.8% 求解=2198us RUNNING 预测峰值=79.00 上限=79.00
+ 4.12s MPC_CAP 目标=110.0 实测=  95.4 RPM PWM= 53.9% 求解=1059us RUNNING 预测峰值=109.00 上限=109.00
+ 4.34s MPC_CAP 目标=110.0 实测= 108.6 RPM PWM= 50.1% 求解=1903us RUNNING 预测峰值=109.00 上限=109.00
+ 4.57s MPC_CAP 目标=110.0 实测= 108.8 RPM PWM= 50.1% 求解=2260us RUNNING 预测峰值=109.00 上限=109.00
+ 4.80s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 50.0% 求解=2197us RUNNING 预测峰值=109.00 上限=109.00
+ 5.02s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 49.9% 求解=2104us RUNNING 预测峰值=109.00 上限=109.00
+ 5.24s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 50.2% 求解=1744us RUNNING 预测峰值=109.00 上限=109.00
+ 5.45s MPC_CAP 目标=110.0 实测= 108.8 RPM PWM= 50.3% 求解=1743us RUNNING 预测峰值=109.00 上限=109.00
+ 5.66s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.2% 求解=2310us RUNNING 预测峰值=109.00 上限=109.00
+ 5.87s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 50.1% 求解=2199us RUNNING 预测峰值=109.00 上限=109.00
+ 6.09s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 50.1% 求解=1770us RUNNING 预测峰值=109.00 上限=109.00
+ 6.30s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 49.9% 求解=2154us RUNNING 预测峰值=109.00 上限=109.00
+ 6.52s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=2237us RUNNING 预测峰值=109.00 上限=109.00
+ 6.75s MPC_CAP 目标=110.0 实测= 108.8 RPM PWM= 50.2% 求解=1869us RUNNING 预测峰值=109.00 上限=109.00
+ 6.97s MPC_CAP 目标=110.0 实测= 109.1 RPM PWM= 49.8% 求解=1890us RUNNING 预测峰值=109.00 上限=109.00
+ 7.18s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.2% 求解=2211us RUNNING 预测峰值=109.00 上限=109.00
+ 7.39s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.2% 求解=2233us RUNNING 预测峰值=109.00 上限=109.00
+ 7.60s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=2217us RUNNING 预测峰值=109.00 上限=109.00
+ 7.82s MPC_CAP 目标=110.0 实测= 109.1 RPM PWM= 49.8% 求解=2223us RUNNING 预测峰值=109.00 上限=109.00
+ 8.04s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.2% 求解=2245us RUNNING 预测峰值=109.00 上限=109.00
+ 8.25s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.2% 求解=2241us RUNNING 预测峰值=109.00 上限=109.00
+ 8.47s MPC_CAP 目标=110.0 实测= 108.8 RPM PWM= 50.2% 求解=2235us RUNNING 预测峰值=109.00 上限=109.00
+ 8.70s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 50.0% 求解=2253us RUNNING 预测峰值=109.00 上限=109.00
+ 8.93s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=2255us RUNNING 预测峰值=109.00 上限=109.00
+ 9.15s MPC_CAP 目标=110.0 实测= 108.8 RPM PWM= 50.2% 求解=1911us RUNNING 预测峰值=109.00 上限=109.00
+ 9.37s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=2136us RUNNING 预测峰值=109.00 上限=109.00
+ 9.58s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 50.1% 求解=2177us RUNNING 预测峰值=109.00 上限=109.00
+ 9.79s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 50.1% 求解=2150us RUNNING 预测峰值=109.00 上限=109.00
+10.00s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM=  0.0% 求解=2262us STOPPED
+MPC_CAP: 10s，PWM 上限 55%；车轮悬空，电机电源为已调好的 10V。
+3…
+2…
+1…
+ 0.00s MPC_CAP 目标= 80.0 实测=   0.0 RPM PWM= 39.4% 求解=737us RUNNING 预测峰值=79.00 上限=79.00
+ 0.20s MPC_CAP 目标= 80.0 实测=  72.8 RPM PWM= 37.6% 求解=1528us RUNNING 预测峰值=79.00 上限=79.00
+ 0.43s MPC_CAP 目标= 80.0 实测=  78.6 RPM PWM= 36.8% 求解=1813us RUNNING 预测峰值=79.00 上限=79.00
+ 0.65s MPC_CAP 目标= 80.0 实测=  78.8 RPM PWM= 36.8% 求解=2304us RUNNING 预测峰值=79.00 上限=79.00
+ 0.88s MPC_CAP 目标= 80.0 实测=  79.0 RPM PWM= 36.5% 求解=2226us RUNNING 预测峰值=79.00 上限=79.00
+ 1.08s MPC_CAP 目标= 80.0 实测=  79.0 RPM PWM= 36.5% 求解=2225us RUNNING 预测峰值=79.00 上限=79.00
+ 1.29s MPC_CAP 目标= 80.0 实测=  78.9 RPM PWM= 36.8% 求解=2235us RUNNING 预测峰值=79.00 上限=79.00
+ 1.50s MPC_CAP 目标= 80.0 实测=  79.0 RPM PWM= 36.8% 求解=2243us RUNNING 预测峰值=79.00 上限=79.00
+ 1.73s MPC_CAP 目标= 80.0 实测=  79.1 RPM PWM= 36.5% 求解=1874us RUNNING 预测峰值=79.00 上限=79.00
+ 1.95s MPC_CAP 目标= 80.0 实测=  79.0 RPM PWM= 36.5% 求解=2164us RUNNING 预测峰值=79.00 上限=79.00
+ 2.17s MPC_CAP 目标= 80.0 实测=  78.9 RPM PWM= 36.8% 求解=1737us RUNNING 预测峰值=79.00 上限=79.00
+ 2.38s MPC_CAP 目标= 80.0 实测=  78.9 RPM PWM= 36.7% 求解=2100us RUNNING 预测峰值=79.00 上限=79.00
+ 2.58s MPC_CAP 目标= 80.0 实测=  79.0 RPM PWM= 36.7% 求解=1736us RUNNING 预测峰值=79.00 上限=79.00
+ 2.79s MPC_CAP 目标= 80.0 实测=  79.0 RPM PWM= 36.5% 求解=2103us RUNNING 预测峰值=79.00 上限=79.00
+ 3.01s MPC_CAP 目标= 80.0 实测=  78.9 RPM PWM= 36.8% 求解=1765us RUNNING 预测峰值=79.00 上限=79.00
+ 3.22s MPC_CAP 目标= 80.0 实测=  79.0 RPM PWM= 36.7% 求解=1769us RUNNING 预测峰值=79.00 上限=79.00
+ 3.44s MPC_CAP 目标= 80.0 实测=  79.0 RPM PWM= 36.5% 求解=2123us RUNNING 预测峰值=79.00 上限=79.00
+ 3.64s MPC_CAP 目标= 80.0 实测=  78.9 RPM PWM= 36.8% 求解=2132us RUNNING 预测峰值=79.00 上限=79.00
+ 3.84s MPC_CAP 目标= 80.0 实测=  79.0 RPM PWM= 36.7% 求解=1868us RUNNING 预测峰值=79.00 上限=79.00
+ 4.06s MPC_CAP 目标=110.0 实测=  83.9 RPM PWM= 55.0% 求解=1743us RUNNING 预测峰值=109.00 上限=109.00
+ 4.26s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 49.0% 求解=1465us RUNNING 预测峰值=109.00 上限=109.00
+ 4.47s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 50.0% 求解=2157us RUNNING 预测峰值=109.00 上限=109.00
+ 4.68s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 50.1% 求解=1796us RUNNING 预测峰值=109.00 上限=109.00
+ 4.90s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.2% 求解=2237us RUNNING 预测峰值=109.00 上限=109.00
+ 5.12s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=2244us RUNNING 预测峰值=109.00 上限=109.00
+ 5.34s MPC_CAP 目标=110.0 实测= 108.8 RPM PWM= 50.2% 求解=1863us RUNNING 预测峰值=109.00 上限=109.00
+ 5.56s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=2432us RUNNING 预测峰值=109.00 上限=109.00
+ 5.79s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=2250us RUNNING 预测峰值=109.00 上限=109.00
+ 6.00s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 49.9% 求解=2224us RUNNING 预测峰值=109.00 上限=109.00
+ 6.22s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=2256us RUNNING 预测峰值=109.00 上限=109.00
+ 6.44s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=2229us RUNNING 预测峰值=109.00 上限=109.00
+ 6.67s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=2250us RUNNING 预测峰值=109.00 上限=109.00
+ 6.89s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 50.1% 求解=2466us RUNNING 预测峰值=109.00 上限=109.00
+ 7.10s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 50.0% 求解=2269us RUNNING 预测峰值=109.00 上限=109.00
+ 7.31s MPC_CAP 目标=110.0 实测= 109.1 RPM PWM= 49.8% 求解=2218us RUNNING 预测峰值=109.00 上限=109.00
+ 7.53s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 50.0% 求解=2140us RUNNING 预测峰值=109.00 上限=109.00
+ 7.75s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=2132us RUNNING 预测峰值=109.00 上限=109.00
+ 7.97s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=2238us RUNNING 预测峰值=109.00 上限=109.00
+ 8.19s MPC_CAP 目标=110.0 实测= 108.8 RPM PWM= 50.2% 求解=1867us RUNNING 预测峰值=109.00 上限=109.00
+ 8.41s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=1856us RUNNING 预测峰值=109.00 上限=109.00
+ 8.62s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 49.9% 求解=2224us RUNNING 预测峰值=109.00 上限=109.00
+ 8.83s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=2209us RUNNING 预测峰值=109.00 上限=109.00
+ 9.08s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=2238us RUNNING 预测峰值=109.00 上限=109.00
+ 9.30s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=2208us RUNNING 预测峰值=109.00 上限=109.00
+ 9.51s MPC_CAP 目标=110.0 实测= 109.1 RPM PWM= 49.8% 求解=2193us RUNNING 预测峰值=109.00 上限=109.00
+ 9.73s MPC_CAP 目标=110.0 实测= 109.0 RPM PWM= 50.1% 求解=2218us RUNNING 预测峰值=109.00 上限=109.00
+ 9.94s MPC_CAP 目标=110.0 实测= 108.9 RPM PWM= 50.1% 求解=2204us RUNNING 预测峰值=109.00 上限=109.00
+MPC: 10s，PWM 上限 55%；车轮悬空，电机电源为已调好的 10V。
+3…
+2…
+1…
+ 0.00s MPC 目标= 80.0 实测=   0.0 RPM PWM= 39.5% 求解=604us RUNNING
+ 0.21s MPC 目标= 80.0 实测=  76.3 RPM PWM= 39.6% 求解=248us RUNNING
+ 0.43s MPC 目标= 80.0 实测=  80.4 RPM PWM= 36.5% 求解=226us RUNNING
+ 0.65s MPC 目标= 80.0 实测=  79.6 RPM PWM= 37.1% 求解=183us RUNNING
+ 0.88s MPC 目标= 80.0 实测=  79.8 RPM PWM= 37.1% 求解=183us RUNNING
+ 1.09s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=206us RUNNING
+ 1.31s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=173us RUNNING
+ 1.52s MPC 目标= 80.0 实测=  79.8 RPM PWM= 37.1% 求解=192us RUNNING
+ 1.73s MPC 目标= 80.0 实测=  79.8 RPM PWM= 37.1% 求解=191us RUNNING
+ 1.94s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=157us RUNNING
+ 2.15s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=188us RUNNING
+ 2.38s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=161us RUNNING
+ 2.59s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=120us RUNNING
+ 2.82s MPC 目标= 80.0 实测=  79.8 RPM PWM= 37.1% 求解=138us RUNNING
+ 3.04s MPC 目标= 80.0 实测=  79.8 RPM PWM= 37.1% 求解=140us RUNNING
+ 3.26s MPC 目标= 80.0 实测=  79.8 RPM PWM= 37.1% 求解=198us RUNNING
+ 3.50s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=189us RUNNING
+ 3.71s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=195us RUNNING
+ 3.93s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=186us RUNNING
+ 4.15s MPC 目标=110.0 实测=  96.1 RPM PWM= 54.4% 求解=264us RUNNING
+ 4.37s MPC 目标=110.0 实测= 110.7 RPM PWM= 50.1% 求解=202us RUNNING
+ 4.60s MPC 目标=110.0 实测= 109.6 RPM PWM= 50.4% 求解=188us RUNNING
+ 4.81s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.5% 求解=178us RUNNING
+ 5.03s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.5% 求解=167us RUNNING
+ 5.26s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=170us RUNNING
+ 5.48s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=201us RUNNING
+ 5.69s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=199us RUNNING
+ 5.92s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.5% 求解=196us RUNNING
+ 6.13s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=202us RUNNING
+ 6.35s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=160us RUNNING
+ 6.58s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=129us RUNNING
+ 6.79s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=116us RUNNING
+ 7.01s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=124us RUNNING
+ 7.22s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.4% 求解=146us RUNNING
+ 7.45s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=203us RUNNING
+ 7.68s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=195us RUNNING
+ 7.90s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=178us RUNNING
+ 8.11s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=196us RUNNING
+ 8.35s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=187us RUNNING
+ 8.56s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=187us RUNNING
+ 8.77s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.4% 求解=176us RUNNING
+ 8.97s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=184us RUNNING
+ 9.18s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=185us RUNNING
+ 9.39s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.4% 求解=202us RUNNING
+ 9.62s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=194us RUNNING
+ 9.84s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=173us RUNNING
+trial_01_mpc target=80: tail MAE=0.13 RPM, IAE=9.80 RPM*s, overshoot=3.7% (2.94 RPM), settling=0.38s, MPC solver max=604us
+trial_01_mpc target=110: tail MAE=0.13 RPM, IAE=4.24 RPM*s, overshoot=3.5% (1.05 RPM), settling=0.27s, MPC solver max=604us
+trial_01_mpc_cap target=80: tail MAE=1.05 RPM, IAE=13.04 RPM*s, overshoot=0.0% (0.00 RPM), settling=0.46s, MPC solver max=2716us
+  预测约束最大违反=0.00000 RPM；实测高于目标的最大值=0.000 RPM
+trial_01_mpc_cap target=110: tail MAE=1.05 RPM, IAE=9.89 RPM*s, overshoot=0.0% (0.00 RPM), settling=0.29s, MPC solver max=2716us
+  预测约束最大违反=0.00000 RPM；实测高于目标的最大值=0.000 RPM
+trial_02_mpc target=80: tail MAE=0.12 RPM, IAE=9.73 RPM*s, overshoot=3.2% (2.53 RPM), settling=0.37s, MPC solver max=604us
+trial_02_mpc target=110: tail MAE=0.12 RPM, IAE=4.35 RPM*s, overshoot=2.4% (0.72 RPM), settling=0.22s, MPC solver max=604us
+trial_02_mpc_cap target=80: tail MAE=1.05 RPM, IAE=12.90 RPM*s, overshoot=0.0% (0.00 RPM), settling=0.25s, MPC solver max=2466us
+  预测约束最大违反=0.00000 RPM；实测高于目标的最大值=0.000 RPM
+trial_02_mpc_cap target=110: tail MAE=1.05 RPM, IAE=9.58 RPM*s, overshoot=0.0% (0.00 RPM), settling=0.25s, MPC solver max=2466us
+  预测约束最大违反=0.00000 RPM；实测高于目标的最大值=0.000 RPM
+曲线：$RUN_ROOT/data/compare_cap1/comparison.png
+指标：$RUN_ROOT/data/compare_cap1/metrics.csv

@@ -1,0 +1,12 @@
+{
+  "id": 8,
+  "slug": "08-pi-speed",
+  "title": "PI恒速、目标参数、正反转与OLED反馈",
+  "goal": "先把120RPM固定实验扩展成可指定目标、时长和方向的闭环任务，观察误差如何改变PWM。",
+  "power": "车轮悬空、共地可靠、反馈正常后接通10V；保持同一编码器方向校正。",
+  "sources": [
+    "host/pi_control.py",
+    "main/motor.c",
+    "main/motor_display.c"
+  ]
+}

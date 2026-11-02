@@ -1,0 +1,13 @@
+{
+  "id": 6,
+  "slug": "06-encoder-debug",
+  "title": "编码器接线与共地排错",
+  "goal": "同时读到C1/C2脉冲，用测量缩小供电、接地、端子、GPIO和软件之间的故障范围。",
+  "power": "电机10V断开，只保留USB和编码器3.3V供电；用手慢转轮子。",
+  "sources": [
+    "main/encoder.c",
+    "main/encoder.h",
+    "host/encoder_monitor.py",
+    "docs/hardware.md"
+  ]
+}

@@ -1,0 +1,217 @@
+python3 motor_mpc.py compare --port /dev/ttyACM0 \
+  --model $RUN_ROOT/data/id02/model.json \
+  --rpm 80 --step-rpm 110 \
+  --out $RUN_ROOT/data/compare_id02_80_110
+PID: 10s，PWM 上限 55%；车轮悬空，电机电源为已调好的 10V。
+3…
+2…
+1…
+ 0.00s PID 目标= 80.0 实测=   0.0 RPM PWM= 33.3% 求解=0us RUNNING
+ 0.20s PID 目标= 80.0 实测=  62.1 RPM PWM= 37.3% 求解=0us RUNNING
+ 0.41s PID 目标= 80.0 实测=  75.8 RPM PWM= 36.5% 求解=0us RUNNING
+ 0.62s PID 目标= 80.0 实测=  77.7 RPM PWM= 36.7% 求解=0us RUNNING
+ 0.83s PID 目标= 80.0 实测=  78.4 RPM PWM= 36.7% 求解=0us RUNNING
+ 1.04s PID 目标= 80.0 实测=  78.6 RPM PWM= 36.8% 求解=0us RUNNING
+ 1.25s PID 目标= 80.0 实测=  78.7 RPM PWM= 36.9% 求解=0us RUNNING
+ 1.46s PID 目标= 80.0 实测=  78.8 RPM PWM= 37.0% 求解=0us RUNNING
+ 1.67s PID 目标= 80.0 实测=  79.0 RPM PWM= 37.0% 求解=0us RUNNING
+ 1.89s PID 目标= 80.0 实测=  79.0 RPM PWM= 37.1% 求解=0us RUNNING
+ 2.11s PID 目标= 80.0 实测=  79.1 RPM PWM= 37.1% 求解=0us RUNNING
+ 2.33s PID 目标= 80.0 实测=  79.3 RPM PWM= 37.1% 求解=0us RUNNING
+ 2.55s PID 目标= 80.0 实测=  79.3 RPM PWM= 37.2% 求解=0us RUNNING
+ 2.77s PID 目标= 80.0 实测=  79.5 RPM PWM= 37.2% 求解=0us RUNNING
+ 2.98s PID 目标= 80.0 实测=  79.5 RPM PWM= 37.2% 求解=0us RUNNING
+ 3.21s PID 目标= 80.0 实测=  79.6 RPM PWM= 37.2% 求解=0us RUNNING
+ 3.42s PID 目标= 80.0 实测=  79.6 RPM PWM= 37.3% 求解=0us RUNNING
+ 3.63s PID 目标= 80.0 实测=  79.7 RPM PWM= 37.3% 求解=0us RUNNING
+ 3.84s PID 目标= 80.0 实测=  79.8 RPM PWM= 37.3% 求解=0us RUNNING
+ 4.05s PID 目标=110.0 实测=  79.8 RPM PWM= 54.8% 求解=0us RUNNING
+ 4.25s PID 目标=110.0 实测= 105.2 RPM PWM= 51.3% 求解=0us RUNNING
+ 4.47s PID 目标=110.0 实测= 109.6 RPM PWM= 51.1% 求解=0us RUNNING
+ 4.68s PID 目标=110.0 实测= 110.1 RPM PWM= 51.1% 求解=0us RUNNING
+ 4.89s PID 目标=110.0 实测= 110.2 RPM PWM= 51.1% 求解=0us RUNNING
+ 5.10s PID 目标=110.0 实测= 110.4 RPM PWM= 51.1% 求解=0us RUNNING
+ 5.30s PID 目标=110.0 实测= 110.3 RPM PWM= 51.1% 求解=0us RUNNING
+ 5.52s PID 目标=110.0 实测= 110.4 RPM PWM= 51.0% 求解=0us RUNNING
+ 5.72s PID 目标=110.0 实测= 110.4 RPM PWM= 51.0% 求解=0us RUNNING
+ 5.93s PID 目标=110.0 实测= 110.2 RPM PWM= 51.0% 求解=0us RUNNING
+ 6.14s PID 目标=110.0 实测= 110.3 RPM PWM= 51.0% 求解=0us RUNNING
+ 6.35s PID 目标=110.0 实测= 110.1 RPM PWM= 51.0% 求解=0us RUNNING
+ 6.58s PID 目标=110.0 实测= 110.2 RPM PWM= 51.0% 求解=0us RUNNING
+ 6.79s PID 目标=110.0 实测= 110.3 RPM PWM= 51.0% 求解=0us RUNNING
+ 7.00s PID 目标=110.0 实测= 110.3 RPM PWM= 50.9% 求解=0us RUNNING
+ 7.20s PID 目标=110.0 实测= 110.3 RPM PWM= 50.9% 求解=0us RUNNING
+ 7.42s PID 目标=110.0 实测= 110.2 RPM PWM= 50.9% 求解=0us RUNNING
+ 7.62s PID 目标=110.0 实测= 110.1 RPM PWM= 50.9% 求解=0us RUNNING
+ 7.83s PID 目标=110.0 实测= 110.2 RPM PWM= 50.9% 求解=0us RUNNING
+ 8.05s PID 目标=110.0 实测= 110.1 RPM PWM= 50.9% 求解=0us RUNNING
+ 8.25s PID 目标=110.0 实测= 110.1 RPM PWM= 50.9% 求解=0us RUNNING
+ 8.48s PID 目标=110.0 实测= 110.1 RPM PWM= 50.9% 求解=0us RUNNING
+ 8.70s PID 目标=110.0 实测= 110.1 RPM PWM= 50.9% 求解=0us RUNNING
+ 8.93s PID 目标=110.0 实测= 110.0 RPM PWM= 50.9% 求解=0us RUNNING
+ 9.15s PID 目标=110.0 实测= 110.0 RPM PWM= 50.9% 求解=0us RUNNING
+ 9.36s PID 目标=110.0 实测= 110.2 RPM PWM= 50.9% 求解=0us RUNNING
+ 9.58s PID 目标=110.0 实测= 110.1 RPM PWM= 50.9% 求解=0us RUNNING
+ 9.80s PID 目标=110.0 实测= 110.1 RPM PWM= 50.9% 求解=0us RUNNING
+10.00s PID 目标=110.0 实测= 110.0 RPM PWM=  0.0% 求解=0us STOPPED
+MPC: 10s，PWM 上限 55%；车轮悬空，电机电源为已调好的 10V。
+3…
+2…
+1…
+ 0.00s MPC 目标= 80.0 实测=   0.0 RPM PWM= 39.5% 求解=569us RUNNING
+ 0.21s MPC 目标= 80.0 实测=  76.1 RPM PWM= 39.7% 求解=202us RUNNING
+ 0.43s MPC 目标= 80.0 实测=  80.5 RPM PWM= 36.5% 求解=179us RUNNING
+ 0.65s MPC 目标= 80.0 实测=  79.4 RPM PWM= 37.2% 求解=147us RUNNING
+ 0.88s MPC 目标= 80.0 实测=  79.7 RPM PWM= 37.2% 求解=143us RUNNING
+ 1.09s MPC 目标= 80.0 实测=  80.0 RPM PWM= 37.2% 求解=144us RUNNING
+ 1.30s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.2% 求解=147us RUNNING
+ 1.51s MPC 目标= 80.0 实测=  79.8 RPM PWM= 37.2% 求解=147us RUNNING
+ 1.72s MPC 目标= 80.0 实测=  80.0 RPM PWM= 37.1% 求解=146us RUNNING
+ 1.95s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.2% 求解=102us RUNNING
+ 2.16s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=100us RUNNING
+ 2.37s MPC 目标= 80.0 实测=  79.8 RPM PWM= 37.2% 求解=156us RUNNING
+ 2.58s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=108us RUNNING
+ 2.79s MPC 目标= 80.0 实测=  79.8 RPM PWM= 37.2% 求解=98us RUNNING
+ 2.99s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.2% 求解=111us RUNNING
+ 3.24s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=146us RUNNING
+ 3.49s MPC 目标= 80.0 实测=  80.0 RPM PWM= 37.1% 求解=153us RUNNING
+ 3.70s MPC 目标= 80.0 实测=  79.8 RPM PWM= 37.2% 求解=139us RUNNING
+ 3.92s MPC 目标= 80.0 实测=  80.0 RPM PWM= 37.2% 求解=136us RUNNING
+ 4.14s MPC 目标=110.0 实测=  95.0 RPM PWM= 54.8% 求解=195us RUNNING
+ 4.36s MPC 目标=110.0 实测= 110.7 RPM PWM= 50.2% 求解=132us RUNNING
+ 4.58s MPC 目标=110.0 实测= 109.7 RPM PWM= 50.5% 求解=158us RUNNING
+ 4.80s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.6% 求解=147us RUNNING
+ 5.01s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.6% 求解=152us RUNNING
+ 5.24s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.5% 求解=150us RUNNING
+ 5.46s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.5% 求解=142us RUNNING
+ 5.68s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.5% 求解=108us RUNNING
+ 5.90s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.5% 求解=95us RUNNING
+ 6.11s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.5% 求解=89us RUNNING
+ 6.32s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.5% 求解=90us RUNNING
+ 6.53s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.4% 求解=89us RUNNING
+ 6.74s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=94us RUNNING
+ 6.96s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.4% 求解=98us RUNNING
+ 7.18s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.4% 求解=108us RUNNING
+ 7.40s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=142us RUNNING
+ 7.63s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.4% 求解=141us RUNNING
+ 7.84s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=133us RUNNING
+ 8.05s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=123us RUNNING
+ 8.30s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=128us RUNNING
+ 8.51s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.4% 求解=142us RUNNING
+ 8.71s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=125us RUNNING
+ 8.92s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=125us RUNNING
+ 9.13s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=159us RUNNING
+ 9.35s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=134us RUNNING
+ 9.57s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.4% 求解=161us RUNNING
+ 9.79s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.4% 求解=152us RUNNING
+10.00s MPC 目标=110.0 实测= 109.9 RPM PWM=  0.0% 求解=129us STOPPED
+MPC: 10s，PWM 上限 55%；车轮悬空，电机电源为已调好的 10V。
+3…
+2…
+1…
+ 0.00s MPC 目标= 80.0 实测=   0.0 RPM PWM= 39.5% 求解=570us RUNNING
+ 0.21s MPC 目标= 80.0 实测=  76.3 RPM PWM= 40.0% 求解=240us RUNNING
+ 0.42s MPC 目标= 80.0 实测=  80.8 RPM PWM= 36.5% 求解=181us RUNNING
+ 0.64s MPC 目标= 80.0 实测=  79.6 RPM PWM= 37.1% 求解=123us RUNNING
+ 0.86s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=156us RUNNING
+ 1.09s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=150us RUNNING
+ 1.30s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=154us RUNNING
+ 1.51s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=147us RUNNING
+ 1.72s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=168us RUNNING
+ 1.95s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=139us RUNNING
+ 2.17s MPC 目标= 80.0 实测=  79.8 RPM PWM= 37.1% 求解=133us RUNNING
+ 2.38s MPC 目标= 80.0 实测=  80.0 RPM PWM= 37.1% 求解=90us RUNNING
+ 2.61s MPC 目标= 80.0 实测=  80.0 RPM PWM= 37.0% 求解=98us RUNNING
+ 2.81s MPC 目标= 80.0 实测=  80.0 RPM PWM= 37.1% 求解=159us RUNNING
+ 3.03s MPC 目标= 80.0 实测=  80.0 RPM PWM= 37.0% 求解=103us RUNNING
+ 3.24s MPC 目标= 80.0 实测=  79.8 RPM PWM= 37.1% 求解=108us RUNNING
+ 3.45s MPC 目标= 80.0 实测=  80.0 RPM PWM= 37.0% 求解=103us RUNNING
+ 3.67s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=108us RUNNING
+ 3.89s MPC 目标= 80.0 实测=  79.9 RPM PWM= 37.1% 求解=94us RUNNING
+ 4.11s MPC 目标=110.0 实测=  94.8 RPM PWM= 55.0% 求解=197us RUNNING
+ 4.33s MPC 目标=110.0 实测= 110.8 RPM PWM= 50.1% 求解=133us RUNNING
+ 4.56s MPC 目标=110.0 实测= 109.6 RPM PWM= 50.4% 求解=148us RUNNING
+ 4.78s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=152us RUNNING
+ 5.01s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.4% 求解=122us RUNNING
+ 5.23s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.4% 求解=120us RUNNING
+ 5.45s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.4% 求解=122us RUNNING
+ 5.69s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=152us RUNNING
+ 5.91s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=153us RUNNING
+ 6.11s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=147us RUNNING
+ 6.32s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.4% 求解=168us RUNNING
+ 6.54s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=152us RUNNING
+ 6.75s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.4% 求解=158us RUNNING
+ 6.97s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=149us RUNNING
+ 7.17s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=155us RUNNING
+ 7.37s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=152us RUNNING
+ 7.59s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=152us RUNNING
+ 7.81s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.4% 求解=133us RUNNING
+ 8.01s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.3% 求解=144us RUNNING
+ 8.22s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.4% 求解=157us RUNNING
+ 8.42s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.4% 求解=158us RUNNING
+ 8.63s MPC 目标=110.0 实测= 110.0 RPM PWM= 50.3% 求解=128us RUNNING
+ 8.84s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.4% 求解=155us RUNNING
+ 9.06s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.3% 求解=145us RUNNING
+ 9.28s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.3% 求解=110us RUNNING
+ 9.49s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.3% 求解=116us RUNNING
+ 9.71s MPC 目标=110.0 实测= 109.8 RPM PWM= 50.3% 求解=149us RUNNING
+ 9.92s MPC 目标=110.0 实测= 109.9 RPM PWM= 50.3% 求解=106us RUNNING
+PID: 10s，PWM 上限 55%；车轮悬空，电机电源为已调好的 10V。
+3…
+2…
+1…
+ 0.00s PID 目标= 80.0 实测=   0.0 RPM PWM= 33.3% 求解=0us RUNNING
+ 0.20s PID 目标= 80.0 实测=  62.7 RPM PWM= 37.1% 求解=0us RUNNING
+ 0.42s PID 目标= 80.0 实测=  76.3 RPM PWM= 36.3% 求解=0us RUNNING
+ 0.64s PID 目标= 80.0 实测=  78.1 RPM PWM= 36.5% 求解=0us RUNNING
+ 0.86s PID 目标= 80.0 实测=  78.7 RPM PWM= 36.6% 求解=0us RUNNING
+ 1.07s PID 目标= 80.0 实测=  78.8 RPM PWM= 36.7% 求解=0us RUNNING
+ 1.28s PID 目标= 80.0 实测=  79.1 RPM PWM= 36.7% 求解=0us RUNNING
+ 1.52s PID 目标= 80.0 实测=  79.2 RPM PWM= 36.8% 求解=0us RUNNING
+ 1.73s PID 目标= 80.0 实测=  79.3 RPM PWM= 36.8% 求解=0us RUNNING
+ 1.94s PID 目标= 80.0 实测=  79.3 RPM PWM= 36.8% 求解=0us RUNNING
+ 2.15s PID 目标= 80.0 实测=  79.4 RPM PWM= 36.9% 求解=0us RUNNING
+ 2.38s PID 目标= 80.0 实测=  79.6 RPM PWM= 36.9% 求解=0us RUNNING
+ 2.59s PID 目标= 80.0 实测=  79.6 RPM PWM= 36.9% 求解=0us RUNNING
+ 2.80s PID 目标= 80.0 实测=  79.5 RPM PWM= 37.0% 求解=0us RUNNING
+ 3.01s PID 目标= 80.0 实测=  79.6 RPM PWM= 37.0% 求解=0us RUNNING
+ 3.22s PID 目标= 80.0 实测=  79.8 RPM PWM= 37.0% 求解=0us RUNNING
+ 3.44s PID 目标= 80.0 实测=  79.7 RPM PWM= 37.0% 求解=0us RUNNING
+ 3.66s PID 目标= 80.0 实测=  79.7 RPM PWM= 37.0% 求解=0us RUNNING
+ 3.89s PID 目标= 80.0 实测=  79.7 RPM PWM= 37.0% 求解=0us RUNNING
+ 4.10s PID 目标=110.0 实测=  94.9 RPM PWM= 52.4% 求解=0us RUNNING
+ 4.32s PID 目标=110.0 实测= 109.1 RPM PWM= 50.7% 求解=0us RUNNING
+ 4.54s PID 目标=110.0 实测= 110.4 RPM PWM= 50.7% 求解=0us RUNNING
+ 4.75s PID 目标=110.0 实测= 110.6 RPM PWM= 50.7% 求解=0us RUNNING
+ 4.96s PID 目标=110.0 实测= 110.6 RPM PWM= 50.7% 求解=0us RUNNING
+ 5.17s PID 目标=110.0 实测= 110.6 RPM PWM= 50.6% 求解=0us RUNNING
+ 5.38s PID 目标=110.0 实测= 110.4 RPM PWM= 50.6% 求解=0us RUNNING
+ 5.61s PID 目标=110.0 实测= 110.4 RPM PWM= 50.6% 求解=0us RUNNING
+ 5.82s PID 目标=110.0 实测= 110.5 RPM PWM= 50.6% 求解=0us RUNNING
+ 6.04s PID 目标=110.0 实测= 110.4 RPM PWM= 50.6% 求解=0us RUNNING
+ 6.26s PID 目标=110.0 实测= 110.3 RPM PWM= 50.5% 求解=0us RUNNING
+ 6.49s PID 目标=110.0 实测= 110.3 RPM PWM= 50.5% 求解=0us RUNNING
+ 6.70s PID 目标=110.0 实测= 110.2 RPM PWM= 50.5% 求解=0us RUNNING
+ 6.93s PID 目标=110.0 实测= 110.3 RPM PWM= 50.5% 求解=0us RUNNING
+ 7.15s PID 目标=110.0 实测= 110.2 RPM PWM= 50.5% 求解=0us RUNNING
+ 7.38s PID 目标=110.0 实测= 110.3 RPM PWM= 50.4% 求解=0us RUNNING
+ 7.59s PID 目标=110.0 实测= 110.1 RPM PWM= 50.5% 求解=0us RUNNING
+ 7.80s PID 目标=110.0 实测= 110.1 RPM PWM= 50.4% 求解=0us RUNNING
+ 8.02s PID 目标=110.0 实测= 110.1 RPM PWM= 50.4% 求解=0us RUNNING
+ 8.23s PID 目标=110.0 实测= 110.1 RPM PWM= 50.4% 求解=0us RUNNING
+ 8.44s PID 目标=110.0 实测= 110.1 RPM PWM= 50.4% 求解=0us RUNNING
+ 8.66s PID 目标=110.0 实测= 109.9 RPM PWM= 50.5% 求解=0us RUNNING
+ 8.88s PID 目标=110.0 实测= 110.1 RPM PWM= 50.4% 求解=0us RUNNING
+ 9.10s PID 目标=110.0 实测= 110.1 RPM PWM= 50.4% 求解=0us RUNNING
+ 9.31s PID 目标=110.0 实测= 110.0 RPM PWM= 50.4% 求解=0us RUNNING
+ 9.53s PID 目标=110.0 实测= 110.1 RPM PWM= 50.4% 求解=0us RUNNING
+ 9.74s PID 目标=110.0 实测= 110.0 RPM PWM= 50.4% 求解=0us RUNNING
+ 9.95s PID 目标=110.0 实测= 110.1 RPM PWM= 50.4% 求解=0us RUNNING
+trial_01_mpc target=80: tail MAE=0.08 RPM, IAE=9.69 RPM*s, overshoot=3.3%, settling=0.37s, MPC solver max=569us
+trial_01_mpc target=110: tail MAE=0.11 RPM, IAE=4.14 RPM*s, overshoot=2.4%, settling=0.22s, MPC solver max=569us
+trial_01_pid target=80: tail MAE=0.33 RPM, IAE=15.06 RPM*s, overshoot=0.0%, settling=0.73s, MPC solver max=0us
+trial_01_pid target=110: tail MAE=0.09 RPM, IAE=4.69 RPM*s, overshoot=1.4%, settling=0.31s, MPC solver max=0us
+trial_02_mpc target=80: tail MAE=0.07 RPM, IAE=9.53 RPM*s, overshoot=4.0%, settling=0.42s, MPC solver max=570us
+trial_02_mpc target=110: tail MAE=0.11 RPM, IAE=4.19 RPM*s, overshoot=2.8%, settling=0.22s, MPC solver max=570us
+trial_02_pid target=80: tail MAE=0.28 RPM, IAE=14.18 RPM*s, overshoot=0.0%, settling=0.64s, MPC solver max=0us
+trial_02_pid target=110: tail MAE=0.06 RPM, IAE=5.06 RPM*s, overshoot=2.1%, settling=0.26s, MPC solver max=0us

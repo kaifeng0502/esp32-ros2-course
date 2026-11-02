@@ -1,0 +1,12 @@
+{
+  "id": 15,
+  "slug": "15-parameters",
+  "title": "Parameter：目标、时长和控制参数如何传到硬件",
+  "goal": "读取、修改、校验并保存ROS参数，理解配置与触发运动的区别。",
+  "power": "只改参数不启动电机；configured客户端会启动任务，执行前车轮悬空、10V接通。",
+  "sources": [
+    "ros2/motor_action_interfaces/config/motor.yaml",
+    "ros2/motor_action_interfaces/scripts/motor_action_core.py",
+    "ros2/motor_action_interfaces/scripts/motor_action_client.py"
+  ]
+}

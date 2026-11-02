@@ -1,0 +1,13 @@
+{
+  "id": 19,
+  "slug": "19-identification",
+  "title": "真实电机的预测模型辨识与留出验证",
+  "goal": "用多档PWM实验拟合二阶ARX模型，区分训练拟合、一步预测与连续自由预测。",
+  "power": "车轮悬空、供电10V且负载不变；这是显式18秒开环实验，结束后自动停机。",
+  "sources": [
+    "host/motor_mpc.py",
+    "host/predictive_model.py",
+    "main/motor.c",
+    "data/observed/model-summary.json"
+  ]
+}

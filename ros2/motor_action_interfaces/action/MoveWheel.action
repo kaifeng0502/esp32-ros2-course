@@ -1,0 +1,20 @@
+# Signed relative turns of the wheel/output shaft: positive FWD, negative REV.
+# Zero selects a forward timed speed run; timeout_sec becomes its duration.
+float64 turns
+uint16 rpm
+uint16 timeout_sec
+---
+bool success
+bool drive_disabled
+# Encoder estimate, not an independent measurement of the wheel angle.
+float64 final_turns
+float64 error_degrees
+string message
+---
+float64 current_turns
+float64 target_turns
+float64 remaining_turns
+float64 progress_percent
+float64 rpm
+float64 pwm_percent
+string phase

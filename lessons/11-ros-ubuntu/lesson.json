@@ -1,0 +1,12 @@
+{
+  "id": 11,
+  "slug": "11-ros-ubuntu",
+  "title": "Ubuntu/UTM、ROS 2 Jazzy与USB权限",
+  "goal": "在Ubuntu中确认ROS 2节点可通信，再把ESP32 USB交给虚拟机。",
+  "power": "ROS入门和权限检查期间电机10V断开。",
+  "sources": [
+    "lessons/11-ros-ubuntu/code/check.sh",
+    "docs/setup.md",
+    "docs/troubleshooting.md"
+  ]
+}

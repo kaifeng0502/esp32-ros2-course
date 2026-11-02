@@ -1,0 +1,12 @@
+{
+  "id": 16,
+  "slug": "16-launch",
+  "title": "Launch：一条命令启动桥接与绘图",
+  "goal": "统一启动节点、加载配置和管理退出，让实验不依赖手工开许多程序。",
+  "power": "Launch本身不自动发送goal；启动时可保持10V断开，准备运动后再接。",
+  "sources": [
+    "ros2/motor_action_interfaces/launch/motor_lab.launch.py",
+    "ros2/motor_action_interfaces/scripts/motor_plot.py",
+    "ros2/motor_action_interfaces/config/motor.yaml"
+  ]
+}

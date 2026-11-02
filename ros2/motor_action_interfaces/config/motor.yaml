@@ -1,0 +1,21 @@
+motor_action_server:
+  ros__parameters:
+    port: /dev/ttyACM0
+    publish_signed_encoder: false
+    encoder_sign: -1
+    tolerance_deg: 5.0
+    # These are defaults read by the --configured client, not immediate commands.
+    target_rpm: 120
+    run_seconds: 5
+    # 0.0 = timed forward run; positive/negative = relative position goal.
+    target_turns: 0.0
+    kp: 0.15
+    ki: 0.30
+    antiwindup: true
+    max_pwm: 80.0
+
+wheel_joint_state:
+  ros__parameters:
+    encoder_sign: -1
+    counts_per_rev: 1400.0
+    joint_name: wheel_joint
