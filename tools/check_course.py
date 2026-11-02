@@ -23,6 +23,10 @@ def main():
         for source in metadata['sources']:
             if not (ROOT/source).exists(): errors.append(f'Missing lesson source: {source}')
     files = [p for p in ROOT.rglob('*') if p.is_file() and not (set(p.relative_to(ROOT).parts) & SKIP)]
+    for name in ['motor_action_server', 'motor_action_client', 'motor_plot', 'wheel_joint_state']:
+        path = ROOT/'ros2/motor_action_interfaces/scripts'/f'{name}.py'
+        if not path.stat().st_mode & 0o111:
+            errors.append(f'ROS symlink-install needs executable source: {path.name}')
     for p in files:
         if p.suffix == '.py':
             try: ast.parse(p.read_text(), filename=str(p.relative_to(ROOT)))

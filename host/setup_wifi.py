@@ -1,5 +1,6 @@
 """One-time local Wi-Fi setup. Password stays in memory and is sent only by USB."""
 from http.server import BaseHTTPRequestHandler, HTTPServer
+import argparse
 import html
 import ipaddress
 import json
@@ -21,7 +22,7 @@ TOKEN=secrets.token_urlsafe(24)
 RESULT=ROOT/'.run/setup-result.json'
 INFO=ROOT/'.run/setup-info.json'
 
-def provision(ssid,password):
+def provision(ssid,password,device_port=None):
     sb=ssid.encode('utf-8');pb=password.encode('utf-8')
     if not 1<=len(sb)<=32 or b'\x00' in sb:raise ValueError('Wi-Fi 名称需要为 1–32 字节。')
     if (pb and not 8<=len(pb)<=63) or b'\x00' in pb:raise ValueError('密码需要为 8–63 字节；无密码网络可留空。')
@@ -29,7 +30,7 @@ def provision(ssid,password):
     port=None
     def connect():
         p=serial.Serial(port=None,baudrate=115200,timeout=.2,write_timeout=2,exclusive=True)
-        p.dtr=False;p.rts=False;p.port=choose_port(None);p.open();p.reset_input_buffer()
+        p.dtr=False;p.rts=False;p.port=choose_port(device_port);p.open();p.reset_input_buffer()
         return p
     try:
         port=connect()
@@ -107,7 +108,7 @@ class Handler(BaseHTTPRequestHandler):
             size=int(self.headers.get('Content-Length','0'))
             if not 0<size<=2048:raise ValueError('输入过长，请检查网络名称。')
             body=urllib.parse.parse_qs(self.rfile.read(size).decode(),keep_blank_values=True)
-            message=provision(body.get('ssid',[''])[0],body.get('password',[''])[0])
+            message=provision(body.get('ssid',[''])[0],body.get('password',[''])[0],self.server.device_port)
             result={'success':True,'message':message}
         except Exception as exc:
             # Only controlled human-readable errors are returned, never raw request data.
@@ -118,12 +119,21 @@ class Handler(BaseHTTPRequestHandler):
         if result['success']:threading.Thread(target=self.server.shutdown,daemon=True).start()
 
 if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--port',help='Explicit ESP32 serial device, otherwise auto-detect')
+    parser.add_argument('--no-browser',action='store_true',help='Print the local URL without opening a browser')
+    args=parser.parse_args()
     ROOT.joinpath('.run').mkdir(exist_ok=True)
     RESULT.unlink(missing_ok=True)
     server=HTTPServer(('127.0.0.1',0),Handler)
+    server.device_port=args.port
     url=f'http://127.0.0.1:{server.server_port}/{TOKEN}'
     INFO.write_text(json.dumps({'url':url,'pid':os.getpid()}))
     print('Wi-Fi setup page: '+url,flush=True)
-    if '--no-browser' not in sys.argv:webbrowser.open(url)
-    server.serve_forever()
-    server.server_close();INFO.unlink(missing_ok=True)
+    if not args.no_browser:webbrowser.open(url)
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        server.server_close();INFO.unlink(missing_ok=True)
